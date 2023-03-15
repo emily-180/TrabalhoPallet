@@ -213,6 +213,7 @@ public class FormSistema extends javax.swing.JFrame {
                     p = minhaPilha.pop();
                     JOptionPane.showMessageDialog(null, "Removido com sucesso!");
                     mostraPilha(minhaPilha, listPilha);
+                    limpaCampos();
                 }                    
                 else {
                     p = minhaPilha.pop();
@@ -220,7 +221,7 @@ public class FormSistema extends javax.swing.JFrame {
                     minhaPilha.push(p);
                     mostraPilha(minhaPilha, listPilha);
                     JOptionPane.showMessageDialog(null, "Decrementei " + txtQtd.getText() + " do " + p.getDescricao());
-                    
+                    limpaCampos();
                 }
                 mostraPilha(minhaPilha, listPilha);
                 break;
@@ -238,7 +239,6 @@ public class FormSistema extends javax.swing.JFrame {
             minhaPilha.push(pilhaAuxiliar.pop());
             mostraPilha(minhaPilha, listPilha);
             mostraPilha(pilhaAuxiliar, listAux);
-             limpaCampos();
         }
         
     }//GEN-LAST:event_btnRemoveActionPerformed
